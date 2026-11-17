@@ -1,0 +1,17 @@
+  <h2><%= @article.title %>
+
+  <%= link_to edit_article_path(@article), class: "btn btn-outline-secondary btn-sm" do %>
+    <i class="fa-solid fa-pen"></i>
+  <% end %>
+  <%= link_to article_path(@article), class: "btn btn-outline-danger btn-sm",
+        data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
+    <i class="fa-solid fa-trash"></i>
+  <% end %>
+</h2>
+<p><%= @article.content %></p>
+
+
+
+
+
+<p><%= link_to "Return to Articles", root_path  %></p>
